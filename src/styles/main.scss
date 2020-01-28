@@ -12,6 +12,11 @@ body {
   margin: 0 auto;
 }
 
+img {
+  width: 100%;
+  height: auto;
+}
+
 /*Стили кнопок*/
 .btn {
   display: flex;
@@ -55,6 +60,8 @@ body {
   line-height: 110%;
   text-align: center;
   color: #000000;
+  margin-top: 0;
+  margin-bottom: 38px;
 }
 
 /*Телефон*/
@@ -194,17 +201,20 @@ body {
   &__top {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     margin-top: 11px;
     margin-bottom: 12px;
   }
 
   &__social {
+    display: flex;
     width: calc(100% / 2);
   }
 
   &__social a {
     margin-right: 8px;
+    width: 17px;
+    height: 17px;
     &:last-child {
       margin-right: 0;
     }
@@ -243,6 +253,30 @@ body {
     }
   }
 }
+
+/*Стили блока Наши Услуги*/
+.services {
+  padding: 55px 0;
+}
+
+.top-card {
+  display: flex;
+  justify-content: space-between;
+
+  .card {
+    width: calc(100% / 2 - 10px);
+  }
+}
+
+.card {
+  display:flex;
+  flex-direction: column;
+
+  &__img {
+  
+  }
+}
+
 
 /*Стили footer*/
 .footer {
