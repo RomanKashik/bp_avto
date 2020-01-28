@@ -12,6 +12,7 @@
     <title>BP AUTO</title>
   </head>
   <body>
+    <!-- Header -->
     <header class="header">
       <div class="container">
         <nav class="navigation">
@@ -19,40 +20,54 @@
             <img src="images/logo.png" alt="logo" />
           </div>
           <div class="navigation__block">
-            <div class="navigation__phone">+(371) 26858674</div>
-              <ul class="navigation__menu menu">
-                <li class="menu__item">
-                  <a href="#" class="menu__link">О нас</a>
-                </li>
-                <li class="menu__item">
-                  <a href="#" class="menu__link">Наши услуги</a>
-                </li>
-                <li class="menu__item">
-                  <a href="#" class="menu__link">Где искать авто</a>
-                </li>
-                <li class="menu__item">
-                  <a href="#" class="menu__link">Почему мы</a>
-                </li>
-                <li class="menu__item">
-                  <a href="#" class="menu__link">Автосервис и доставка</a>
-                </li>
-                <li class="menu__item">
-                  <a href="#" class="menu__link">Контакты</a>
-                </li>
-              </ul>
+            <div class="navigation__phone phone">+(371) 26858674</div>
+            <ul class="navigation__menu menu">
+              <li class="menu__item">
+                <a href="#" class="menu__link">О нас</a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link">Наши услуги</a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link">Где искать авто</a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link">Почему мы</a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link">Автосервис и доставка</a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link">Контакты</a>
+              </li>
+            </ul>
           </div>
           <div class="navigation__action">
             <div class="navigation__top">
               <div class="navigation__social">
-                <img src="images/icon/icon_media.png" alt="social links" />
+                <a href="#">
+                  <img
+                    src="images/icon/icon_facebook.png"
+                    alt="facebook link"
+                  />
+                </a>
+                <a href="#">
+                  <img
+                    src="images/icon/icon_instagram.png"
+                    alt="instagram link"
+                  />
+                </a>
               </div>
               <div class="navigation__lang">
-                <a href="#">RUS</a> | <a href="#">LV</a> |
+                <a href="#">RUS</a>
+                <a href="#">LV</a>
                 <a href="#">EN</a>
               </div>
             </div>
             <div class="navigation__bottom">
-              <a href="#" class="btn navigation__btn">Заказать осмотр</a>
+              <a href="#" class="btn btn__small navigation__btn"
+                >Заказать осмотр</a
+              >
             </div>
           </div>
         </nav>
@@ -62,11 +77,44 @@
           </h1>
           <p class="header__subtitle">Осматриваем автомобили перед</p>
           <p class="header__subtitle">покупкой по всей Латвии, Литве.</p>
-          <a href="#" class="btn header__btn">О нас</a>
+          <a href="#" class="btn header__btn btn__small">О нас</a>
+          <div class="header__scroll"></div>
         </div>
       </div>
     </header>
+    <!-- Main content -->
+    <main></main>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__content">
+          <div class="footer__contact">
+            <p class="footer__phone phone">+(371) 26858674</p>
+            <p class="footer__adress">Ул. Слокас 52 (LV-1007) Рига</p>
+          </div>
+          <div class="footer__menu">
+            <div class="footer__item">
+              <a href="#" class="footer__link">О Нас</a>
+              <a href="#" class="footer__link">Наши Услуги</a>
+            </div>
+            <div class="footer__item">
+              <a href="#" class="footer__link">Где искать авто</a>
+              <a href="#" class="footer__link">Почему мы</a>
+            </div>
+            <div class="footer__item">
+              <a href="#" class="footer__link">Автосервис и доставка</a>
+              <a href="#" class="footer__link">Контакты</a>
+            </div>
+          </div>
+          <div class="footer__logo logo">
+            <img src="images/logo.png" alt="logo" />
+            <div class="footer__copyright">Все права защищены</div>
+          </div>
+        </div>
+      </div>
+    </footer>
 
+    <!-- Scripts -->
     <script src="libs/jquery.min.js"></script>
     <script src="libs/jquery.magnific-popup.min.js"></script>
     <script src="js/main.js"></script>
