@@ -5,6 +5,7 @@
 body {
   font-family: "robotoregular";
   font-size: 16px;
+  background: #E5E5E5;
 }
 
 .container {
@@ -271,10 +272,8 @@ img {
 .card {
   display:flex;
   flex-direction: column;
-
-  &__img {
-  
-  }
+  background-color: #ffffff;
+border-radius: 5px;
 }
 
 
