@@ -5,7 +5,7 @@
 body {
   font-family: "robotoregular";
   font-size: 16px;
-  background: #E5E5E5;
+  background: #e5e5e5;
 }
 
 .container {
@@ -18,6 +18,11 @@ img {
   height: auto;
 }
 
+ul {
+  margin: 0;
+  list-style-type: none;
+}
+
 /*Стили кнопок*/
 .btn {
   display: flex;
@@ -28,6 +33,7 @@ img {
   letter-spacing: 0.05em;
   color: #ffffff;
   text-decoration: none;
+  cursor: pointer;
 
   &__small {
     width: 190px;
@@ -262,20 +268,104 @@ img {
 
 .top-card {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 
   .card {
-    width: calc(100% / 2 - 10px);
+    flex-basis: calc(100% / 2 - 10px);
+    margin-bottom: 20px;
+  }
+}
+.bottom-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .card {
+    flex-basis: calc(100% / 3 - 13.33px);
+    margin-bottom: 20px;
   }
 }
 
 .card {
-  display:flex;
+  display: flex;
   flex-direction: column;
+  align-items: center;
+  height: 100%;
   background-color: #ffffff;
-border-radius: 5px;
-}
+  border-radius: 5px;
 
+  &__img img {
+    border-radius: 5px 5px 0 0;
+  }
+
+  &__title {
+    font-family: robotobold;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 110%;
+    text-align: center;
+    color: #000000;
+    margin: 26px 0 26px;
+  }
+
+  &__list {
+    padding: 0 46px;
+    & > ul {
+      padding-left: 15px;
+
+      & > li {
+        line-height: 110%;
+        color: #000000;
+        position: relative;
+        margin-bottom: 20px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        &:before {
+          content: url("../images/icon/dots.png");
+          position: absolute;
+          top: 0;
+          left: -14px;
+        }
+      }
+    }
+  }
+
+  &__content p {
+    line-height: 130%;
+    color: #000000;
+    padding: 0 28px;
+  }
+
+  &__line-top {
+    width: calc(100% - 106px);
+    margin: 26px auto;
+  }
+
+  &__line-bottom {
+    width: calc(100% - 56px);
+    margin: 26px auto;
+  }
+
+  &__price {
+    font-family: robotobold;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 110%;
+    color: #00a3ff;
+    margin-bottom: 26px;
+  }
+
+  &__btn {
+    background: #00a3ff;
+    margin-bottom: 26px;
+    &:hover {
+      background: linear-gradient(270deg, #014ea8 0%, #00a3ff 100%);
+    }
+  }
+}
 
 /*Стили footer*/
 .footer {
@@ -329,10 +419,10 @@ border-radius: 5px;
     }
   }
 
-&__logo {
-  display: flex;
-  flex-direction: column;
-}
+  &__logo {
+    display: flex;
+    flex-direction: column;
+  }
 
   &__copyright {
     align-self: flex-end;
