@@ -6,6 +6,8 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   background: #e5e5e5;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .container {
@@ -435,7 +437,9 @@ ul {
     text-align: center;
     letter-spacing: -0.01em;
     color: #000000;
-
+    & > span {
+      font-size: 16px;
+    }
     &--why {
       font-size: 16px;
     }
@@ -624,6 +628,175 @@ ul {
   }
 }
 
+/*Стили к блоку Map*/
+.map {
+  margin: 55px 0;
+  position: relative;
+
+  &__contact {
+    position: absolute;
+    top: 111px;
+    left: calc(100% - 560px);
+    width: 505px;
+    height: 333px;
+    padding: 47px 0 47px 53px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 110%;
+    color: #000000;
+    margin: 0;
+    margin-bottom: 27px;
+  }
+
+  &__name {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 110%;
+    color: #000000;
+    margin: 0;
+    margin-bottom: 27px;
+  }
+
+  &__data {
+    font-size: 16px;
+    line-height: 110%;
+    color: #000000;
+    margin: 0;
+    padding-left: 18px;
+    margin-bottom: 20px;
+    position: relative;
+
+    & > a {
+      text-decoration: none;
+      color: #000000;
+    }
+
+    &--loc {
+      &::before {
+        content: url("../images/icon/icon_location.png");
+        position: absolute;
+        top: 0;
+        left: -4px;
+      }
+    }
+
+    &--tel {
+      &::before {
+        content: url("../images/icon/header_phone.png");
+        position: absolute;
+        top: 0;
+        left: -4px;
+      }
+    }
+
+    &--mail {
+      &::before {
+        content: url("../images/icon/icon_mail.png");
+        position: absolute;
+        top: 0;
+        left: -4px;
+      }
+    }
+
+    &--web {
+      &::before {
+        content: url("../images/icon/icon_web.png");
+        position: absolute;
+        top: 0;
+        left: -4px;
+      }
+    }
+  }
+}
+
+/*Стили для блока Feedback*/
+.feedback {
+  padding-bottom: 40px;
+
+  &__inner {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__img {
+    width: 143px;
+    height: 208px;
+    margin-right: 45px;
+  }
+
+  &__desc {
+    line-height: 110%;
+    text-align: center;
+    color: #000000;
+    margin: 0;
+    margin-top: 14px;
+  }
+
+  &__form {
+    display: flex;
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__label {
+    font-size: 16px;
+    line-height: 110%;
+    color: #000000;
+  }
+
+  &__input,
+  &__textarea {
+    background: #ffffff;
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    margin-bottom: 18px;
+    padding-left: 20px;
+    &::placeholder {
+      padding-left: 20px;
+    }
+  }
+
+  &__input {
+    width: 295px;
+    height: 44px;
+  }
+  &__textarea {
+    max-height: 129px;
+    min-height: 50px;
+    width: 400px;
+    resize: vertical;
+    padding: 10px 20px;
+  }
+
+  &__captcha {
+    width: 270px;
+    height: 67px;
+  }
+
+  &__btn {
+    align-self: flex-end;
+    background: #00a3ff;
+    &:hover {
+      font-size: 18px;
+      background: linear-gradient(90deg, #00a3ff 0%, #014ea8 100%);
+      box-shadow: 7px 7px 10px rgba(0, 163, 255, 0.2);
+    }
+  }
+}
+
 /*Стили блока for look*/
 .for-look {
   background-image: url("../images/where_bg.jpg");
@@ -674,9 +847,6 @@ ul {
     text-align: center;
     color: #ffffff;
     margin: 0 0 16px 0;
-  }
-
-  &__img {
   }
 }
 
