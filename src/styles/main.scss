@@ -39,6 +39,7 @@ ul {
   color: #ffffff;
   text-decoration: none;
   cursor: pointer;
+  transition: background 0.3s linear;
 
   &__small {
     width: 190px;
@@ -48,7 +49,7 @@ ul {
   &__large {
     width: 418px;
     height: 44px;
-    background: #00a3ff;
+    background: linear-gradient(270deg,#00a3ff 100%,#014ea8 100%);
     box-shadow: 7px 7px 10px rgba(0, 163, 255, 0.2);
     font-size: 16px;
     font-weight: 500;
@@ -56,7 +57,6 @@ ul {
     letter-spacing: 0.05em;
     &:hover {
       font-style: normal;
-      font-weight: 700;
       font-size: 18px;
       background: linear-gradient(90deg, #00a3ff 0%, #014ea8 100%);
       box-shadow: 7px 7px 10px rgba(0, 163, 255, 0.2);
@@ -131,7 +131,7 @@ ul {
 
   &__btn {
     font-size: 18px;
-    background: #00a3ff;
+    background: linear-gradient(270deg,#00a3ff 100%,#014ea8 100%);
     box-shadow: 0px 0px 15px rgba(0, 163, 255, 0.5);
     margin-top: 39px;
     margin-bottom: 115px;
@@ -364,7 +364,7 @@ ul {
   }
 
   &__btn {
-    background: #00a3ff;
+    background: linear-gradient(270deg,#00a3ff 100%,#014ea8 100%);
     margin-bottom: 26px;
     &:hover {
       background: linear-gradient(270deg, #014ea8 0%, #00a3ff 100%);
@@ -484,6 +484,7 @@ ul {
   &__input {
     width: 100%;
     height: 44px;
+    border: none;
     border-radius: 5px;
     padding-left: 14px;
     margin-bottom: 20px;
@@ -560,6 +561,10 @@ ul {
     background-size: cover;
     width: 100%;
     height: 706px;
+  }
+
+  &__heading {
+    display: none;
   }
 
   &__form {
@@ -650,6 +655,13 @@ ul {
   margin: 55px 0;
   position: relative;
 
+  &__heading {
+    display: none;
+  }
+
+  &> iframe {
+    width: 100%;
+  }
   &__contact {
     position: absolute;
     top: 111px;
@@ -805,7 +817,7 @@ ul {
 
   &__btn {
     align-self: flex-end;
-    background: #00a3ff;
+    background: linear-gradient(270deg,#00a3ff 100%,#014ea8 100%);
     &:hover {
       font-size: 18px;
       background: linear-gradient(90deg, #00a3ff 0%, #014ea8 100%);
