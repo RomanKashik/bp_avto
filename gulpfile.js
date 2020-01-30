@@ -16,7 +16,8 @@ const path = {
       lib: [
          './node_modules/normalize.css/normalize.css',
          './node_modules/jquery/dist/jquery.min.js',
-         './node_modules/magnific-popup/dist/*'
+         './node_modules/magnific-popup/dist/*',
+         './src/libs/jquery.malihu.PageScroll2id.js'
       ]
    },
    watch: {
