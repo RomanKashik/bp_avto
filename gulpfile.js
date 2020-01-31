@@ -75,7 +75,7 @@ const htmlbeautifyOptions = {
 gulp.task('webserver', function () {
    webserver.init({
       server: {
-         baseDir: "./build/"
+         baseDir: "./build/",
       }
    });
 });
