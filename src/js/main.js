@@ -38,4 +38,24 @@ $(function () {
         highlightSelector: 'a',
       })
   })
+
+  //  нопка вверх
+
+  $(window).scroll(function() {
+    if ($(window).scrollTop() > 500) {
+      buttonUp.show(500);
+    } else {
+      buttonUp.hide(500);
+    }
+  });
+  let buttonUp = $('#btnUp');
+  buttonUp.on('click', function (event) {
+    event.preventDefault();
+    $('html, body').animate({
+      scrollTop: $('body').offset().top
+    }, 800);
+  });
+
+
+
 })

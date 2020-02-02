@@ -350,7 +350,7 @@ ul {
 
   &__title {
     color: $title-color;
-    font-size: 15px;
+    font-size: 14px;
     font-style: normal;
     font-weight: 500;
     line-height: 110%;
@@ -394,6 +394,7 @@ ul {
     font-size: 13px;
     line-height: 130%;
     padding: 0 28px;
+    margin-top: 0;
   }
 
   &__line-top {
@@ -468,12 +469,12 @@ ul {
     }
 
     &--why {
-      @media screen and (min-width: 768px) {
-        width: calc(100% / 4 - 24px);
-        &:nth-last-child(-n + 4) {
-          margin-bottom: 0;
-        }
+      width: calc(100% / 4 - 24px);
+
+      &:nth-last-child(-n + 4) {
+        margin-bottom: 0;
       }
+
     }
   }
 
@@ -535,7 +536,7 @@ ul {
   }
 
   &__label {
-    font-size: 16px;
+    font-size: 15.5px;
     line-height: 110%;
   }
 
@@ -698,10 +699,10 @@ ul {
     margin: 0 auto;
     width: 190px;
 
-    &:hover {
-      background: url('../images/delivery_hover.png') no-repeat center;
-      background-size: contain;
-    }
+    //&:hover {
+    //  background: url('../images/delivery_hover.png') no-repeat center;
+    //  background-size: contain;
+    //}
 
     &--hover {
       background: url('../images/delivery_hover.png') no-repeat center;
@@ -1180,5 +1181,25 @@ ul {
 }
 
 .mfp-close-btn-in .mfp-close {
- opacity: 0;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+#btnUp {
+  background: url('../images/icon/icon_arrow-up.png') no-repeat;
+  background-size: cover;
+  border: none;
+  bottom: 80px;
+  display: none;
+  height: 51px;
+  overflow: hidden;
+  position: fixed;
+  right: 16px;
+  text-decoration: none;
+  text-indent: 100%;
+  width: 51px;
+  z-index: 130;
+  cursor: pointer;
 }
