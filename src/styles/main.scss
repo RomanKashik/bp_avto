@@ -226,7 +226,7 @@ ul {
       font-weight: 700;
       line-height: 140%;
       text-decoration: none;
-      text-transform: uppercase;
+      //text-transform: uppercase;
       transition: all .3s linear;
 
       &:hover {
@@ -289,6 +289,7 @@ ul {
   }
 
   &__btn {
+    text-transform: capitalize;
     background: transparent;
     border: 1px solid $color-white;
     font-size: 14px;
@@ -374,6 +375,7 @@ ul {
         line-height: 120%;
         margin-bottom: 16px;
         position: relative;
+        text-transform: lowercase;
 
         &:last-child {
           margin-bottom: 0;
@@ -536,7 +538,7 @@ ul {
   }
 
   &__label {
-    font-size: 15.5px;
+    font-size: 15px;
     line-height: 110%;
   }
 
