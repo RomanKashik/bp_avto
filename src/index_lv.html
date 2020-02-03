@@ -3,6 +3,12 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="Bp auto (car selection) -  auto pārbaude pirms pirkšanas. Jaunas un lietotas
+	automašīnas piemeklēšana.">
+	<meta name="keywords" content="Auto pirmspirkšanas pārbaude,Auto diagnostika,auto eksperti,lietoti auto,lietotas
+	automašīnas,izbraukšanas pārbaude,biezuma merītājs,noirkt auto,pārdot auto,auto remonts,Auto pirmspirkšanas pārbaude
+	 Rīga,Auto diagnostika Rīga,letas automašīnas Rīga,izbraukšanas pārbaude Rīga,dzīinēja diagnostika,DZINĒJA PĀRBAUDE,
+	 Auto no Vācijas,auto no Eiropas,">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 	<meta http-equiv="x-rim-auto-match" content="none">
 	<meta name="format-detection" content="telephone=no">
@@ -11,7 +17,8 @@
 	<link rel="stylesheet" href="fonts/stylesheet.css" />
 	<link rel="stylesheet" href="css/main.css" />
 	
-	<title>BP AUTO Red LV</title>
+	<title>BP AUTO</title>
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
 <!-- Header -->
@@ -19,7 +26,7 @@
 	<div class="container-fluid">
 		<nav class="navigation">
 			<div class="navigation__logo logo">
-				<img src="images/logo.png" alt="logo" />
+				<a href="#"><img src="images/logo.png" alt="logo" /></a>
 			</div>
 			<div class="navigation__block">
 				<div class="navigation__phone phone">+(371) 26858674</div>
@@ -61,11 +68,11 @@
 						</a>
 					</div>
 					<div class="navigation__lang">
-						<a href="#">RUS</a>
+						<a href="index.html">RUS</a>
 						<span>|</span>
-						<a href="index.html">LV</a>
+						<a href="#">LV</a>
 						<span>|</span>
-						<a href="#">EN</a>
+						<a href="index_en.html">EN</a>
 					</div>
 				</div>
 				<div class="navigation__bottom">
@@ -246,7 +253,7 @@
 	<!-- Problem -->
 	<section class="flex">
 		<h2 class="main-title">
-			Pamatproblēmas, pērkot auto patstāvīgi:
+			Pamatproblēmas, pērkot auto patstāvīgi
 		</h2>
 		
 		<div class="container">
@@ -255,8 +262,8 @@
 					<div class="flex__img">
 						<img src="images/icon/icon_car.png" alt="car" />
 					</div>
-					<div class="flex__description">
-						Automobiļa stāvoklis <br>neatbilst <br>aprakstītajam <span>(slēpto defektu remonts)</span>
+					<div class="flex__description flex__description--problem">
+						Automobiļa stāvoklis <br>neatbilst aprakstītajam<br> <span>(slēpto defektu remonts)</span>
 					</div>
 				</div>
 				
@@ -264,14 +271,14 @@
 					<div class="flex__img">
 						<img src="images/icon/icon_speedometer.png" alt="speedometer" />
 					</div>
-					<div class="flex__description">Sagrozīts <br>nobraukum</div>
+					<div class="flex__description flex__description--problem">Sagrozīts <br>nobraukum</div>
 				</div>
 				
 				<div class="flex__items flex__items--problem">
 					<div class="flex__img">
 						<img src="images/icon/icon_alarm.png" alt="alarm" />
 					</div>
-					<div class="flex__description">
+					<div class="flex__description flex__description--problem">
 						Problēmas ar dokumentiem <br />un reģistrāciju
 					</div>
 				</div>
@@ -280,7 +287,7 @@
 					<div class="flex__img">
 						<img src="images/icon/icon_judge.png" alt="jude" />
 					</div>
-					<div class="flex__description">
+					<div class="flex__description flex__description--problem">
 						Riski, pērkot <br />ieķīlātus automobiļus
 					</div>
 				</div>
@@ -289,7 +296,7 @@
 					<div class="flex__img">
 						<img src="images/icon/icon_time.png" alt="time" />
 					</div>
-					<div class="flex__description">
+					<div class="flex__description flex__description--problem">
 						Izšķiests laiks <br /> dzīva automobiļa atrašanai
 					</div>
 				</div>
@@ -298,7 +305,7 @@
 					<div class="flex__img">
 						<img src="images/icon/icon_wallet.png" alt="wallet" />
 					</div>
-					<div class="flex__description">
+					<div class="flex__description flex__description--problem">
 						Nepamatoti paaugstinātas cenas<br /> un neadekvātums no pārdevēju puses
 					</div>
 				</div>
@@ -308,7 +315,7 @@
 	
 	<!-- For look -->
 	<section class="for-look" id="for-look">
-		<h2 class="main-title main-title--color">
+		<h2 class="main-title main-title--color main-title--where">
 			Kur meklēt auto
 		</h2>
 		<div class="container">
@@ -357,7 +364,7 @@
 	<!-- Why us-->
 	<section class="flex flex--why" id="why-us">
 		<h2 class="main-title">
-			Kāpēc tieši mēs:
+			Kāpēc tieši mēs
 		</h2>
 		
 		<div class="container">
@@ -367,7 +374,7 @@
 						<img src="images/icon/icon_1.png" alt="01" />
 					</div>
 					<div class="flex__description flex__description--why">
-						mēs pārbaudām katru sludinājumu, sazināmies ar pārdevējiem pirms došanās pie viņiem
+						Mēs pārbaudām katru sludinājumu, sazināmies ar pārdevējiem pirms došanās pie viņiem
 					</div>
 				</div>
 				
@@ -376,7 +383,7 @@
 						<img src="images/icon/icon_2.png" alt="02" />
 					</div>
 					<div class="flex__description flex__description--why">
-						varam veikt auto<br /> apskati kā izbraukumā, tā arī mūsu servisā
+						Varam veikt auto<br /> apskati kā izbraukumā, tā arī mūsu servisā
 					</div>
 				</div>
 				
@@ -385,7 +392,7 @@
 						<img src="images/icon/icon_3.png" alt="03" />
 					</div>
 					<div class="flex__description flex__description--why">
-						zemas cenas visam <br />
+						Zemas cenas visam <br />
 						pakalpojumu klāstam
 					</div>
 				</div>
@@ -395,7 +402,7 @@
 						<img src="images/icon/icon_4.png" alt="04" />
 					</div>
 					<div class="flex__description flex__description--why">
-						strādājam kā kompānija,<br /> sniedzot visas atskaites un aktus
+						Strādājam kā kompānija,<br /> sniedzot visas atskaites un aktus
 					</div>
 				</div>
 				
@@ -404,7 +411,7 @@
 						<img src="images/icon/icon_5.png" alt="05" />
 					</div>
 					<div class="flex__description flex__description--why">
-						pateicoties kaulēšanās procesam ar pārdevējiem, visbiežāk izmaksas par mūsu pakalpojumiem tiek
+						Pateicoties kaulēšanās procesam ar pārdevējiem, visbiežāk izmaksas par mūsu pakalpojumiem tiek
 						segtas ar atlaidi no kopējās auto cenas
 					</div>
 				</div>
@@ -414,7 +421,7 @@
 						<img src="images/icon/icon_6.png" alt="06" />
 					</div>
 					<div class="flex__description flex__description--why">
-						liela pieredze darbā <br />ar automobiļiem
+						Liela pieredze darbā <br />ar automobiļiem
 					</div>
 				</div>
 				
@@ -423,7 +430,7 @@
 						<img src="images/icon/icon_7.png" alt="07" />
 					</div>
 					<div class="flex__description flex__description--why">
-						mēs vienmēr esam klienta pusē,<br /> strādājam līdz galam, kamēr atradīsim vajadzīgo automobili
+						Mēs vienmēr esam klienta pusē,<br /> strādājam līdz galam, kamēr atradīsim vajadzīgo automobili
 					</div>
 				</div>
 				
@@ -432,7 +439,7 @@
 						<img src="images/icon/icon_8.png" alt="08" />
 					</div>
 					<div class="flex__description flex__description--why">
-						samaksa pēc faktiskās <br /> pakalpojuma sniegšanas
+						Samaksa pēc faktiskās <br /> pakalpojuma sniegšanas
 					</div>
 				</div>
 			</div>
@@ -444,13 +451,13 @@
 		<div class="container">
 			<div class="order__wrap ">
 				<h2 class="order__heading">Заказ</h2>
-				<form action="#" class="form order__form">
+				<form action="mail.php?lan=lv" method="POST" class="form order__form">
 					<div class="form__title order__title">Pieteikties Apskatei</div>
 					<div class="form__subtitle order__subtitle">
 						Pasūtiet auto apskati pie mums <br /><br />
 						Atstājiet saiti uz jūs interesējošo auto, <br /> un mūsu menedžeris sazināsies ar jums.
 					</div>
-					
+
 					<label class="form__label order__label" for="link"
 					>Saite</label
 					>
@@ -460,8 +467,10 @@
 							name="link"
 							id="link"
 							placeholder=""
+							required
 					/>
-					
+					<input type="hidden" name="lang=lv">
+
 					<label class="form__label order__label" for="email"
 					>E-pasts/tālrunis </label
 					>
@@ -471,14 +480,17 @@
 							name="email"
 							id="email"
 							placeholder=""
+							required
 					/>
-					
+
 					<div class="form__captcha">
-						<img src="images/captcha.png" alt="captcha" />
+						<div class="g-recaptcha" style="transform:scale(0.9);transform-origin:0;" data-sitekey="6LfcSNUUAAAAAIC4yP1R4wMMLBttNJUrjPxuhJBn"></div>
+
+						<!--						<img src="images/captcha.png" alt="captcha" />-->
 					</div>
-					
-					<button class="btn btn__large form__btn">Poga sūtīt</button>
-					
+
+					<input class="btn btn__large form__btn" name="submit" type="submit" value="Poga sūtīt">
+
 					<hr class="form__line" />
 					<div class="form__contacts order__contacts">
 						<p>Ar mums var sazināties arī pa tālruni:</p>
@@ -492,38 +504,38 @@
 			</div>
 		</div>
 	</section>
-	
+
 	<!-- Delivery -->
 	<section class="delivery" id="delivery">
 		<div class="container">
 			<div class="delivery__wrap">
-				<h3 class="main-title main-title--color">Автосервис и доставка</h3>
+				<h3 class="main-title main-title--color">Autoserviss un piegāde</h3>
 				<p class="delivery__subtitle">
-					Посетите сайты нашей компании и узнайте о нас больше:
+					Apmeklējiet mūsu kompānijas mājaslapas un uzziniet par mums vairāk:
 				</p>
 				<div class="delivery__inner">
 					<div class="delivery__left delivery__block">
 						<a href=" http://bpauto.lv/cardelivery/" target="_blank" class="delivery__link"></a>
 						<p class="delivery__description">
-							Доставка автомобилей автовозом из Европы <br />
-							в Страны Балтии. Еженедельная перевозка авто <br />Литва -
-							Латвия - Эстония.
+							Automobiļu piegāde ar autovedēju no Eiropas <br />uz Baltijas valstīm. Iknedēļas auto
+							pārvadāšana<br /> Lietuva – Latvija – Igaunija.
 						</p>
 					</div>
 					<div class="delivery__right delivery__block">
 						<a href="http://bpauto.lv/" target="_blank" class="delivery__link delivery__link--hover"></a>
 						<p class="delivery__description">
-							Автосервис. <br />Продажа новых, б/у автозапчастей.
+							Autoserviss. <br>
+							Jaunu un lietotu auto rezerves daļu pārdošana.
 						</p>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-	
+
 	<!-- Map -->
 	<section class="map" id="contact">
-		<h2 class="map__heading">Контакты</h2>
+		<h2 class="map__heading">Kontakti</h2>
 		<iframe
 				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3076.9365685277126!2d24.05614865797299!3d56.953551868737456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46eecffd5268be5f%3A0xc439fb05a5f73f44!2zU2xva2FzIGllbGEgNTIsIEt1cnplbWVzIHJham9ucywgUsSrZ2EsIExWLTEwMDcsINCb0LDRgtCy0LjRjw!5e0!3m2!1sru!2sua!4v1580329075130!5m2!1sru!2sua"
 				height="568"
@@ -531,13 +543,13 @@
 				allowfullscreen=""
 		>
 		</iframe>
-		
+
 		<div class="map__contact">
-			<p class="map__title">Контакты</p>
+			<p class="map__title">Kontakti</p>
 			<p class="map__name">BP Auto | SIA "Next Baltic"</p>
-			<p class="map__data map__data--loc">Ул. Слокас 52 (LV-1007) Рига</p>
+			<p class="map__data map__data--loc">Slokas Iela 52 (LV-1007) Riga, Latvija</p>
 			<p class="map__data map__data--tel">
-				Тел: + (371) 26858674 (WhatsApp/Viber)
+				Tālr:+ (371) 26858674 (WhatsApp/Viber)
 			</p>
 			<p class="map__data map__data--mail">
 				E-mail: <a href="mailto:info@bpauto.lv">info@bpauto.lv</a>
@@ -547,37 +559,41 @@
 			</p>
 		</div>
 	</section>
-	
+
 	<!-- Feedback -->
 	<section class="feedback">
 		<div class="container">
 			<h3 class="main-title">
-				Обратная связь
+				Atgriezeniskā saikne
 			</h3>
 			<div class="feedback__inner">
 				<div class="feedback__img">
 					<img src="images/ask.png" alt="email" />
 					<p class="feedback__desc">
-						Будем рады помочь, если у вас возникли вопросы
+						Priecāsimies palīdzēt, ja jums radīsies jautājumi
+
 					</p>
 				</div>
-				
-				<form action="#" class="feedback__form">
+
+				<form action="mail.php?lan=lv" method="POST" class="feedback__form">
 					<div class="feedback__block">
-						<label class="feedback__label" for="e-mail">Ваш e-mail</label>
+						<label class="feedback__label" for="e-mail">E-mail</label>
 						<input
 								type="email"
 								name="email"
 								id="e-mail"
 								class="feedback__input"
+								required
 						/>
-						<div class="feedback__captcha">
-							<img src="images/captcha.png" alt="captcha" />
+						<div class="feedback__captcha" >
+							<div class="g-recaptcha" style="transform:scale(0.9);transform-origin:0;" data-sitekey="6LfcSNUUAAAAAIC4yP1R4wMMLBttNJUrjPxuhJBn"></div>
+
+							<!--							<img src="images/captcha.png" alt="captcha" />-->
 						</div>
 					</div>
-					
+
 					<div class="feedback__block">
-						<label class="feedback__label" for="message">Сообщение</label>
+						<label class="feedback__label" for="message">Jūsu ziņojums</label>
 						<textarea
 								name="message"
 								id="message"
@@ -585,9 +601,8 @@
 								rows="10"
 								class="feedback__textarea"
 						></textarea>
-						<button class="btn btn__small feedback__btn" type="submit">
-							Отправить
-						</button>
+						<input class="btn btn__small feedback__btn" type="submit" name="submit" value="Nosūtīt">
+
 					</div>
 				</form>
 			</div>
@@ -600,25 +615,25 @@
 		<div class="footer__content">
 			<div class="footer__contact">
 				<p class="footer__phone phone">+(371) 26858674</p>
-				<p class="footer__adress">Ул. Слокас 52 (LV-1007) Рига</p>
+				<p class="footer__adress">Slokas Iela 52 (LV-1007) Riga, Latvija</p>
 			</div>
 			<div class="footer__menu">
 				<div class="footer__item">
-					<a href="#pop-up-about" class="footer__link popup-about">О Нас</a>
-					<a href="#" class="footer__link">Наши Услуги</a>
+					<a href="#pop-up-about" class="footer__link popup-about">Par mums</a>
+					<a href="#" class="footer__link">Mūsu Pakalpojumi</a>
 				</div>
 				<div class="footer__item">
-					<a href="#" class="footer__link">Где искать авто</a>
-					<a href="#" class="footer__link">Почему мы</a>
+					<a href="#" class="footer__link">Kur meklēt auto</a>
+					<a href="#" class="footer__link">Kāpēc tieši mēs</a>
 				</div>
 				<div class="footer__item">
-					<a href="#" class="footer__link">Автосервис и доставка</a>
-					<a href="#" class="footer__link">Контакты</a>
+					<a href="#" class="footer__link">Autoserviss un piegāde</a>
+					<a href="#" class="footer__link">Kontakti</a>
 				</div>
 			</div>
 			<div class="footer__logo logo">
 				<img src="images/logo.png" alt="logo" />
-				<div class="footer__copyright">Все права защищены</div>
+				<div class="footer__copyright">Visas tiesības aizsargātas</div>
 			</div>
 		</div>
 	</div>
@@ -630,94 +645,87 @@
 	<div class="about" id="pop-up-about">
 		<header class="about__header">
 			<div class="about__bread-crumbs">
-				<a href="index.html">Главная /</a>
-				<span>О нас</span>
+				<a href="index.html">Mājas /</a>
+				<span>Par mums</span>
 			</div>
 			<div class="about__img"></div>
 		</header>
 		<div class="about__close-modal popup-about-dismiss"></div>
 		<div class="about__main">
-			<h3 class="main-title about__title">О нас</h3>
+			<h3 class="main-title about__title">Par mums</h3>
 			<p class="about__subtitle">
-				Компания "BP Auto" предлагает свои услуги в перевозке автомобилей из
-				Европы в Страны Балтии и СНГ.
+				Kompānija BP Auto piedāvā pakalpojumus automašīnu pārvadāšanā no plkst
+				Eiropa Baltijas valstīs un NVS.
 			</p>
-			<p class="about__content">
-				Еженедельно у нас есть возможность загружать от 1 до 8 автомобилей
-				(целый автовоз) в следующих странах: Германия, Польша, Чехия,
-				Голландия, Бельгия, Италия, Франция, Испания, Англия, Швеция, Дания.
-				Все машины мы изначально доставляем на нашу автостоянку в Каунас
-				(Литва), после чего перегружаем на внутренние автовозы для
-				дальнейшей доставки. Если нагрузка автовоза полная, то мы доставляем
-				все машины напрямую, без перегрузок. Сам процесс по перевозке авто
-				застрахован и сопровождается всеми необходимыми документами. Также
-				наша компания осуществляет еженедельные рейсы из Литвы на Латвию и
-				Эстонию. Есть возможность возить авто и на Россию.
+			<p class="about__content">Car Selection - virziens mūsu kompānijā atbild par lietotu un jaunu automobiļu
+				apskati un izraudzīšanos. Mēs piedāvājam profesionālu servisu, veicot automobiļu apskati pirms pirkšanas
+				uz vietas pie pārdēvējiem (pa visu Latviju, Lietuvu, Igauniju), kā arī pilnu auto apskati pie mums
+				servisā. Tā kā dzīvajā tirgū visbiežāk ir diezgan sarežģīti uzreiz trāpīt un atrast labu automobili, mēs
+				piedāvājam tādu pakalpojumu kā auto izraudzīšanās. Šis pakalpojums pilnībā atbrīvo mūsu klientus no
+				nepieciešamības būt klāt katra auto apskatē, taupot viņu laiku.</p>
+			<p class="about__content"> Mūsu pamatuzdevums, meklējot automobili,
+				ir atrast pasūtītājam pašu dzīvāko automobili tirgū atbilstoši viņa budžetam. Kas padara mūsu
+				pakalpojumus īpašus – tā ir mūsu attieksme pret klientu un viņa vēlmēm, liela pieredze darbā auto tirgū,
+				iespēja pēc iegādes apkalpot auto mūsu servisā, zemas konkurētspējīgas cenas, automobiļu meklēšanas
+				teritorija. Detalizētāk ar mūsu pakalpojumiem var iepazīties mājas lapā. Mēs priecāsimies par pastāvīgu
+				sadarbību. Aicinām droši vērsieties pie mums ar visiem jautājumiem, mums ir bezmaksas konsultācijas
+				visiem klientiem. Kontakttālrunis ir norādīts mājas lapā.
 			</p>
-			<p class="about__content">
-				Все перевозки мы делаем на 4 и 8-ми местных автовозах, засчет этого
-				цена может меняться.
-			</p>
-			<p class="about__content">
-				Всю подробную информацию вы можете получить, связавшись с нами по
-				телефону или е-майлу, также для более удобного, быстрого запроса
-				ставки и всей интересующей вас информации мы предлагаем заполнить
-				форму, которая представлена ниже.
-			</p>
-			<p class="about__content">С уважением Bp Auto (Car Logistics).</p>
+			<p class="about__content">Pateicamies par uzmanību. <br>Bp Auto (Car Logistics).</p>
 		</div>
-		
+
 		<footer class="about__footer">
 			<div class="about__logo">
 				<img src="images/logo.png" alt="logo" />
 			</div>
 		</footer>
 	</div>
-	
+
 	<!-- Форма Заказать осмотр -->
-	
-	<form action="#" class="form pop-up__form" id="poup-form">
-		<div class="form__title">Заказать осмотр</div>
+
+	<form action="mail.php?lan=lv" method="POST" class="form pop-up__form" id="poup-form">
+		<div class="form__title">Pieteikties Apskatei</div>
 		<div
 				class="pop-up__close-modal popup-modal-dismiss"
 				data-close="close"
 		></div>
 		<div class="form__subtitle pop-up__subtitle">
-			Оставьте вашу заявку <br />
-			и наш менеджер свяжется с вами
+			Atstājiet jūsu pieteikumu <br>un mūsu menedžeris sazināsies ar jums.
 		</div>
 		
 		<label class="form__label pop-up__label" for="link-popup"
-		>Ваш e-mail или телефон</label
+		>Jūsu talr. vai e-mail</label
 		>
 		<input
 				class="form__input pop-up__input"
 				type="text"
 				name="link"
 				id="link-popup"
-				placeholder="Ваши контакты для обратной связи"
+				placeholder="Jūsu kontaktpersonas, lai saņemtu atsauksmes"
+				required
 		/>
 		
 		<label class="form__label pop-up__label" for="message-popup"
-		>Опишите вашу ситуацию</label
+		>Aprakstiet jūsu situāciju</label
 		>
 		<textarea
 				class="form__textarea pop-up__textarea"
 				name="message"
 				id="message-popup"
-				placeholder="Здесь вы можете в кратце рассказать про автомобиль, выслать ссылку на объявление"
-		>
-        </textarea>
+				placeholder="Jūs varat īsi runāt par automašīnu, nosūtīt saiti uz sludinājumu"></textarea>
 		
 		<div class="form__captcha pop-up__captcha">
-			<img src="images/captcha.png" alt="captcha" />
+			<div class="g-recaptcha" style="transform:scale(0.9);transform-origin:0;"
+				 data-sitekey="6LfcSNUUAAAAAIC4yP1R4wMMLBttNJUrjPxuhJBn"></div>
+			
+			<!--			<img src="images/captcha.png" alt="captcha" />-->
 		</div>
 		
-		<button class="btn btn__large form__btn">Отправить</button>
+		<input class="btn btn__large form__btn" type="submit" name="submit" value="Nosūtīt">
 		
 		<hr class="form__line" />
 		<div class="form__contacts">
-			<p>Также с нами можно связаться по номеру</p>
+			<p>Ar mums var sazināties arī pa tālruni</p>
 			<p>+ (371) 26858674</p>
 			<div class="form__icon">
 				<img src="images/icon/icon_viber.png" alt="viber" />
