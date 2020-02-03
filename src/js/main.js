@@ -2,14 +2,12 @@ $(function () {
   //magnific-popup
   $('.popup-modal').magnificPopup({
     type: 'inline',
-    // fixedContentPos: true,
     preloader: false,
     focus: '#link-popup',
   })
 
   $('.popup-about').magnificPopup({
     type: 'inline',
-    // fixedContentPos: true,
   })
 
   $(document).on('click', '.popup-about-dismiss', function (e) {

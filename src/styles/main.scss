@@ -226,7 +226,7 @@ ul {
       font-weight: 700;
       line-height: 140%;
       text-decoration: none;
-      //text-transform: uppercase;
+      text-transform: uppercase;
       transition: all .3s linear;
 
       &:hover {
@@ -375,8 +375,6 @@ ul {
         line-height: 120%;
         margin-bottom: 16px;
         position: relative;
-        text-transform: lowercase;
-
         &:last-child {
           margin-bottom: 0;
         }
@@ -517,7 +515,6 @@ ul {
   box-shadow: 4px 4px 10px rgba(0, 0, 0, .25);
   display: flex;
   flex-direction: column;
-  //width          : 505px;
   padding: 0 45px;
   width: 450px;
 
@@ -867,10 +864,6 @@ ul {
     border-radius: 5px;
     margin-bottom: 18px;
     padding-left: 20px;
-
-    &::placeholder {
-      padding-left: 20px;
-    }
   }
 
   &__input {
@@ -1095,8 +1088,8 @@ ul {
 
     &::after {
       content: url('../images/icon/icon_steering_wheel.png');
-      position: absolute;
-      left: 85px;
+      position: relative;
+      left: 7px;
       top: 3px;
     }
   }
@@ -1204,4 +1197,13 @@ ul {
   width: 51px;
   z-index: 130;
   cursor: pointer;
+}
+.success-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
 }
