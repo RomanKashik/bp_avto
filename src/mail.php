@@ -4,7 +4,7 @@ if (isset($_POST['submit'])) {
     if (!$_POST['g-recaptcha-response']) {
         if (isset($_GET['lang']) == 'ru') {
             exit('<div style="position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);">Заполните капчу</div>
-                    <script type=\'text/javascript\'>setTimeout(function() {location.href="index.html"}, 1500)</script>');
+                    <script type=\'text/javascript\'>setTimeout(function() {location.href="index.php"}, 1500)</script>');
         } elseif (isset($_GET['lan']) == 'lv') {
             exit('<div style="position: absolute;
   top: 50%;
@@ -36,7 +36,7 @@ if (isset($_POST['submit'])) {
             $messages = htmlspecialchars(trim($_POST['message']));
 
             $to      = 'kashik.roman@rambler.ru';
-            $from ='http://bpauto.lv/avtopodbor/index.html';
+            $from ='http://bpauto.lv/avtopodbor/index.php';
             $subject = '';
             if (isset($_GET['lang']) == 'ru') {
                 $subject .= "car selection (запрос)";
@@ -63,7 +63,7 @@ if (isset($_POST['submit'])) {
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);">Спасибо за заявку. Мы свяжемся с вами в ближайшее время.</div>
-                    <script type=\'text/javascript\'>setTimeout(function() {location.href="index.html"}, 1500)</script>';
+                    <script type=\'text/javascript\'>setTimeout(function() {location.href="index.php"}, 1500)</script>';
                 } elseif (isset($_GET['lan']) == 'lv') {
                     echo '<div class="success-message" style="position: absolute;
   top: 50%;

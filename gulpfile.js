@@ -99,20 +99,20 @@ gulp.task('html:build', function () {
       .pipe(webserver.stream());
 });
 
-// gulp.task('php:build', function(){
-//    return gulp.src(path.src.php)
-//        .pipe(plumber({
-//           errorHandler: notify.onError(function (err) {
-//              return {
-//                 title: 'PHP',
-//                 sound: false,
-//                 message: err.message
-//              }
-//           })
-//        }))
-//        .pipe(gulp.dest(path.build.php))
-//        .pipe(webserver.stream());
-// });
+gulp.task('php:build', function(){
+   return gulp.src(path.src.php)
+       .pipe(plumber({
+          errorHandler: notify.onError(function (err) {
+             return {
+                title: 'PHP',
+                sound: false,
+                message: err.message
+             }
+          })
+       }))
+       .pipe(gulp.dest(path.build.php))
+       .pipe(webserver.stream());
+});
 
 gulp.task('css:build', function () {
    return gulp.src(path.src.css)
@@ -208,7 +208,7 @@ gulp.task('build',
    gulp.series('clean:build',
       gulp.parallel(
          'html:build',
-         // 'php:build',
+         'php:build',
          'css:build',
          'js:build',
          'fonts:build',
@@ -220,7 +220,7 @@ gulp.task('build',
 
 gulp.task('watch', function () {
    gulp.watch(path.watch.html, gulp.parallel('html:build'));
-   // gulp.watch(path.watch.html, gulp.parallel('php:build'));
+   gulp.watch(path.watch.php, gulp.parallel('php:build'));
    gulp.watch(path.watch.css, gulp.parallel('css:build'));
    gulp.watch(path.watch.js, gulp.parallel('js:build'));
    gulp.watch(path.watch.img, gulp.parallel('image:build'));

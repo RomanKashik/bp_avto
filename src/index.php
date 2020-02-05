@@ -1,3 +1,7 @@
+<?php
+session_start();
+require_once ('lang/lang.php');
+?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -35,22 +39,22 @@
 				<div class="navigation__phone phone">+(371) 26858674</div>
 				<ul class="navigation__menu menu">
 					<li class="menu__item">
-						<a href="#pop-up-about" class="menu__link popup-about">О нас</a>
+						<a href="#pop-up-about" class="menu__link popup-about"><?php echo $Lang['about_us']?></a>
 					</li>
 					<li class="menu__item">
-						<a href="#servise" class="menu__link">Наши услуги</a>
+						<a href="#servise" class="menu__link"><?php echo $Lang['what_we_do']?></a>
 					</li>
 					<li class="menu__item">
-						<a href="#for-look" class="menu__link">Где искать авто</a>
+						<a href="#for-look" class="menu__link"><?php echo $Lang['search_car']?></a>
 					</li>
 					<li class="menu__item">
-						<a href="#why-us" class="menu__link">Почему мы</a>
+						<a href="#why-us" class="menu__link"><?php echo $Lang['why_we']?></a>
 					</li>
 					<li class="menu__item">
-						<a href="#delivery" class="menu__link">Автосервис и доставка</a>
+						<a href="#delivery" class="menu__link"><?php echo $Lang['car_service']?></a>
 					</li>
 					<li class="menu__item">
-						<a href="#contact" class="menu__link">Контакты</a>
+						<a href="#contact" class="menu__link"><?php echo $Lang['contacts']?></a>
 					</li>
 				</ul>
 			</div>
@@ -65,15 +69,15 @@
 						</a>
 					</div>
 					<div class="navigation__lang">
-						<a href="#">RUS</a>
+						<a href="index.php?lang=ru">RUS</a>
 						<span>|</span>
-						<a href="index_lv.html">LV</a>
+						<a href="index.php?lang=lv">LV</a>
 						<span>|</span>
-						<a href="index_en.html">EN</a>
+						<a href="index.php?lang=en">EN</a>
 					</div>
 				</div>
 				<div class="navigation__bottom">
-					<a href="#poup-form" class="btn btn__small navigation__btn popup-modal">Заказать осмотр</a>
+					<a href="#poup-form" class="btn btn__small navigation__btn popup-modal"><?php echo $Lang['make_order']?></a>
 				</div>
 			</div>
 		</nav>
@@ -586,7 +590,7 @@
 	<div class="about" id="pop-up-about">
 		<header class="about__header">
 			<div class="about__bread-crumbs">
-				<a href="index.html">Главная /</a>
+				<a href="index.php">Главная /</a>
 				<span>О нас</span>
 			</div>
 			<div class="about__img"></div>
