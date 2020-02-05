@@ -35,46 +35,46 @@ if (isset($_POST['submit'])) {
             $email    = htmlspecialchars(trim($_POST['email']));
             $messages = htmlspecialchars(trim($_POST['message']));
 
-            $to      = 'kas.r@rambler.ru';
-            $subject = "Заказать Осмотр";
+            $to      = 'kashik.roman@rambler.ru';
+            $from ='http://bpauto.lv/avtopodbor/index.html';
+            $subject = '';
+            if (isset($_GET['lang']) == 'ru') {
+                $subject .= "car selection (запрос)";
+            } elseif (isset($_GET['lan']) == 'lv') {
+                $subject .= "car selection (pieprasijums)";
+            } else {
+                $subject .= "car selection (request)";
+            }
 
             $message = "
-<html>
-<head>
-</head>
-<body>
-
-<h4>Контакты:</h4>
-Е-майл: <a href='mailto:" . $email . "'>" . $email . "</a>
-Ссылка: <a href='$links'>" . $links . "</a>
-Сщщбщение : <div>'.$messages.'</div>
-</body>
-</html> 
+Е-майл: <a href='mailto:" . $email . "'>" . $email . "</a><br>
+Ссылка: <a href='$links'>" . $links . "</a><br>
+Сообщение : <div>".$messages."</div>
 ";
             $headers = "MIME-Version: 1.0" . "\r\n";
             $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 
 //$headers .= 'From: <NBOutlet>' . "\r\nReply-to: $mail\r\n";
-            $headers .= 'From: ' . $email . "\r\nReply-to: $email\r\n";
+            $headers .= 'From: ' . $from . "\r\nReply-to:  $from \r\n";
 
             if (mail($to, $subject, $message, $headers)) {
                 if (isset($_GET['lang']) == 'ru') {
                     echo '<div class="success-message" style="position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);">Спасибо за ваш заказ. Мы свяжемся с вами в ближайшее время.</div>
+  transform: translate(-50%,-50%);">Спасибо за заявку. Мы свяжемся с вами в ближайшее время.</div>
                     <script type=\'text/javascript\'>setTimeout(function() {location.href="index.html"}, 1500)</script>';
                 } elseif (isset($_GET['lan']) == 'lv') {
                     echo '<div class="success-message" style="position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);">Paldies par jūsu pasūtījuma. Mēs ar Jums sazināsimies tuvākajā laikā.</div>
+  transform: translate(-50%,-50%);">Paldies par pieteikumu. Mēs ar Jums sazināsimies tuvākajā laikā.</div>
                      <script type=\'text/javascript\'>setTimeout(function() {location.href="index_lv.html"}, 1500)</script>';
                 } else {
                     echo '<div class="success-message" style="position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);">Thank you for your order. We will contact you soon. </div>
+  transform: translate(-50%,-50%);">Thank you for the application. We will contact you soon. </div>
                     <script type=\'text/javascript\'>setTimeout(function() {location.href="index_en.html"}, 1500)</script>';
                 }
             } else {

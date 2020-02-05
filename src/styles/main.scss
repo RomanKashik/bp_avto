@@ -12,20 +12,20 @@ body {
   background: $bg-color-body;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
-  margin: 0 auto;
-  max-width: 1440px;
-  min-width: 1270px;
+  //margin: 0 auto;
+  //max-width: 1440px;
+  min-width: 1300px;
   position: relative;
 }
 
 .container-fluid {
   margin: 0 auto;
-  max-width: 1240px;
+  width: 1030px;
 }
 
 .container {
   margin: 0 auto;
-  max-width: 1030px;
+  width: 1030px;
 }
 
 img {
@@ -93,6 +93,7 @@ ul {
   &--color {
     color: $color-white;
   }
+
   &--where {
     margin-bottom: 42px;
   }
@@ -116,7 +117,7 @@ ul {
 
 //Логотип
 .logo {
-  height: 74px;
+  height: 76px;
   width: 190px;
 }
 
@@ -134,7 +135,7 @@ ul {
     color: $color-white;
     display: flex;
     flex-direction: column;
-    margin-top: 108px;
+    margin-top: 128px;
   }
 
   &__title {
@@ -144,21 +145,20 @@ ul {
     font-weight: 700;
     line-height: 110%;
     margin: 0 0 15px;
-    width: calc(100% / 2 + 69px);
+    width: calc(100% / 2 + 175px);
   }
 
   &__subtitle {
-    font-size: 13px;
+    font-size: 14.5px;
     line-height: 120%;
-    margin: 0;
+    margin: 0 0 30px;
   }
 
   &__btn {
     background: linear-gradient(270deg, $color-blue 100%, #014ea8 100%);
     box-shadow: 0 0 15px rgba(0, 163, 255, 0.5);
     font-size: 18px;
-    margin-bottom: 115px;
-    margin-top: 39px;
+    margin-bottom: 165px;
 
     &:hover {
       background: linear-gradient(270deg, #014ea8 0%, $color-blue 100%);
@@ -192,8 +192,8 @@ ul {
   justify-content: space-between;
 
   &__logo {
+    height: 76px;
     width: 190px;
-    height: 74px;
 
   }
 
@@ -249,13 +249,13 @@ ul {
     align-items: center;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 12px;
-    margin-top: 11px;
+    margin-bottom: 13px;
+    margin-top: 12px;
   }
 
   &__social {
     display: flex;
-    width: calc(100% / 2);
+    width: calc(100% / 2 - 34px);
   }
 
   &__social a {
@@ -266,6 +266,10 @@ ul {
     &:last-child {
       margin-right: 0;
     }
+  }
+
+  &__lang {
+    margin-right: 34px;
   }
 
   &__lang a {
@@ -321,6 +325,7 @@ ul {
     flex-basis: calc(100% / 2 - 25px);
     margin-bottom: 30px;
     margin-right: 20px;
+
     &:last-child {
       margin-right: 0;
     }
@@ -335,23 +340,31 @@ ul {
   width: 1000px;
 
   .card {
-    flex-basis: calc(100% / 3 - 10px);
+    //flex-basis: calc(100% / 3 - 10px);
+    width: calc(100% / 3 - 10px);
     margin-bottom: 20px;
   }
 }
 
 .card {
-  align-items: center;
+  //align-items: center;
   background-color: $color-white;
   border-radius: 5px;
   //height           : 100%;
-  display: flex;
-  flex-direction: column;
+  //display: flex;
+  //flex-direction: column;
 
   &__bottom {
     height: 100%;
   }
-
+  //&__img {
+  //  max-width: 100%;
+  //  max-height: 128px;
+  //  //&--bottom {
+  //  //  max-height: 100%;
+  //  //  margin-bottom: -32px;
+  //  //}
+  //}
   &__img img {
     border-radius: 5px 5px 0 0;
   }
@@ -366,11 +379,13 @@ ul {
     padding: -0px 24px;
     text-align: center;
     text-transform: uppercase;
+    max-width: 100%;
   }
 
   &__list {
     margin-bottom: 22px;
     padding: 0 31px;
+    max-width: 100%;
 
     & > ul {
       padding-left: 15px;
@@ -378,10 +393,11 @@ ul {
       & > li {
         color: $title-color;
         font-size: 13px;
-        font-weight: 400;
+        font-weight: 500;
         line-height: 120%;
         margin-bottom: 16px;
         position: relative;
+
         &:last-child {
           margin-bottom: 0;
         }
@@ -395,18 +411,20 @@ ul {
       }
     }
   }
+  &__content {    max-width:100%;
+  }
 
   &__content p {
     color: $title-color;
     font-size: 13px;
-    line-height: 120%;
+    line-height: 130%;
     padding: 0 28px;
     margin-top: 0;
   }
 
   &__line-top {
     margin-bottom: 22px;
-    margin-top: auto;
+    //margin-top: auto;
     width: calc(100% - 106px);
   }
 
@@ -429,7 +447,7 @@ ul {
 
   &__btn {
     background: linear-gradient(270deg, $color-blue 100%, #014ea8 100%);
-    margin-bottom: 22px;
+    margin: 0 auto 22px;
 
     &:hover {
       background: linear-gradient(270deg, #014ea8 0%, $color-blue 100%);
@@ -505,15 +523,18 @@ ul {
     letter-spacing: -0.01em;
     line-height: 110%;
     text-align: center;
+    max-width: 100%;
 
     & > span {
       font-size: 13px;
       text-transform: uppercase;
 
     }
+
     &--problem {
       text-transform: uppercase;
     }
+
     &--why {
       text-transform: none;
     }
@@ -559,6 +580,7 @@ ul {
     margin-bottom: 15px;
     padding-left: 14px;
     width: 100%;
+    font-size: 15.5px;
 
     &::placeholder {
       color: $color-placeholder;
@@ -578,6 +600,7 @@ ul {
     padding-left: 15px;
     padding-top: 13px;
     width: 100%;
+    font-size: 15.5px;
 
     &::placeholder {
       color: $color-placeholder;
@@ -730,7 +753,7 @@ ul {
     color: $color-white;
     font-size: 13px;
     line-height: 120%;
-    margin-top: 36px;
+    margin-top: 12px;
     text-align: center;
   }
 }
@@ -1120,15 +1143,15 @@ ul {
   &__content {
     color: $title-color;
     font-size: 13px;
-    line-height: 120%;
+    line-height: 130%;
   }
 
   &__footer {
-    margin-top: 50px;
+    margin-top: 25px;
   }
 
   &__logo {
-    height: 74px;
+    height: 76px;
     width: 190px;
   }
 
@@ -1188,7 +1211,9 @@ ul {
     width: 267px;
   }
 }
-
+.mfp-container {
+  height: 0;
+}
 .mfp-close-btn-in .mfp-close {
   opacity: 0;
   width: 0;
@@ -1212,6 +1237,7 @@ ul {
   z-index: 130;
   cursor: pointer;
 }
+
 .success-message {
   display: flex;
   align-items: center;
@@ -1219,5 +1245,5 @@ ul {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 }

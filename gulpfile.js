@@ -127,7 +127,7 @@ gulp.task('css:build', function () {
       }))
       .pipe(sourcemaps.init())
       .pipe(scss())
-      .pipe(autoprefixer('> 2% or last 5 versions'))
+      .pipe(autoprefixer('> 5% or last 10 versions'))
       .pipe(gcmq())
       .pipe(gulp.dest(path.build.css))
       // .pipe(rename({

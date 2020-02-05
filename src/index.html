@@ -2,7 +2,8 @@
 <html lang="ru">
 <head>
 	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!--	<meta name="viewport" content="width=device-width, initial-scale=1.0" />-->
+<!--	<meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.2" />-->
 	<meta name="description"
 		  content="Bp auto (car selection) - проверка, диагностика автомобилей перед покупкой. Автоподбор поддержаных и новых авто. ">
 	<meta name="keywords"
@@ -78,9 +79,8 @@
 		</nav>
 		<div class="header__content">
 			<h1 class="header__title">
-				Подберем для вас самый живой автомобиль на рынке по вашему бюджету. </h1>
-			<p class="header__subtitle">Осматриваем автомобили перед</p>
-			<p class="header__subtitle">покупкой по всей Латвии, Литве.</p>
+				Подберем лучший автомобиль по вашему бюджету </h1>
+			<p class="header__subtitle">Осматриваем автомобили перед покупкой по всей Латвии, Литве.</p>
 			<a href="#pop-up-about" class="btn header__btn btn__small popup-about">О нас</a>
 			<div class="header__scroll"></div>
 		</div>
@@ -96,7 +96,7 @@
 			<!-- top card -->
 			<div class="top-card">
 				<div class="card">
-					<div class="card__img">
+					<div class="card__img ">
 						<img src="images/service_1.jpg" alt="service" />
 					</div>
 					<h3 class="card__title">
@@ -161,7 +161,7 @@
 			<!-- bottom card -->
 			<div class="bottom-card">
 				<div class="card card__bottom">
-					<div class="card__img">
+					<div class="card__img card__img--bottom">
 						<img src="images/service_3.jpg" alt="service" />
 					</div>
 					<h3 class="card__title">
@@ -185,7 +185,7 @@
 				</div>
 
 				<div class="card card__bottom">
-					<div class="card__img">
+					<div class="card__img card__img--bottom">
 						<img src="images/service_4.jpg" alt="service" />
 					</div>
 					<h3 class="card__title">
@@ -209,7 +209,7 @@
 				</div>
 
 				<div class="card card__bottom">
-					<div class="card__img">
+					<div class="card__img card__img--bottom">
 						<img src="images/service_5.jpg" alt="service" />
 					</div>
 					<h3 class="card__title">Авто под заказ <br />из Европы</h3>
@@ -449,8 +449,6 @@
 					<label class="form__label order__label" for="email">Email/телефон </label>
 					<input class="form__input order__input" type="text" name="email" id="email" placeholder=""
 						   required />
-					<input type="hidden" name="lang=ru">
-
 					<div class="form__captcha">
 						<div class="g-recaptcha"  style="transform:scale(0.9);transform-origin:0;" data-sitekey="6LfcSNUUAAAAAIC4yP1R4wMMLBttNJUrjPxuhJBn"></div>
 					</div>
@@ -596,9 +594,9 @@
 		<div class="about__close-modal popup-about-dismiss"></div>
 		<div class="about__main">
 			<h3 class="main-title about__title">О нас</h3>
-			<p class="about__subtitle">
-				Компания "BP Auto" предлагает свои услуги в перевозке автомобилей из
-				Европы в Страны Балтии и СНГ. </p>
+<!--			<p class="about__subtitle">-->
+<!--				Компания "BP Auto" предлагает свои услуги в перевозке автомобилей из-->
+<!--				Европы в Страны Балтии и СНГ. </p>-->
 			<p class="about__content">
 				Направление Car Selection в нашей компании отвечает за осмотр и подбор б/у, новых автомобилей. Мы
 				предлагаем профессиональный сервис по осмотру авто перед покупкой на месте у продавцов (по всей Латвии,
@@ -637,7 +635,6 @@
 		<label class="form__label pop-up__label" for="link-popup">Ваш e-mail или телефон</label>
 		<input class="form__input pop-up__input" type="text" name="link" id="link-popup"
 			   placeholder="Ваши контакты для обратной связи" required />
-
 		<label class="form__label pop-up__label" for="message-popup">Опишите вашу ситуацию</label>
 		<textarea class="form__textarea pop-up__textarea" name="message" id="message-popup"
 				  placeholder="Здесь вы можете в кратце рассказать про автомобиль, выслать ссылку на объявление"></textarea>
@@ -660,6 +657,7 @@
 		</div>
 	</form>
 </section>
+
 <div id="btnUp" style="display: inline;"></div>
 <!-- Scripts -->
 <script src="libs/jquery.min.js"></script>
@@ -668,5 +666,4 @@
 <script src="js/main.js"></script>
 </body>
 </html>
-
 
