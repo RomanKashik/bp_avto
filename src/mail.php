@@ -1,87 +1,74 @@
 <?php
-if (isset($_POST['submit'])) {
+$errors = array();      // array to hold validation errors
+$data   = array();      // array to pass back data
 
-    if (!$_POST['g-recaptcha-response']) {
-        if (isset($_GET['lang']) == 'ru') {
-            exit('<div style="position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);">Заполните капчу</div>
-                    <script type=\'text/javascript\'>setTimeout(function() {location.href="index.php"}, 1500)</script>');
-        } elseif (isset($_GET['lan']) == 'lv') {
-            exit('<div style="position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);">Aizpildīt captcha</div>
-  <script type=\'text/javascript\'>setTimeout(function() {location.href="index_lv.html"}, 1500)</script>');
-        } else {
-            exit('<div style="position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);">Fill Captcha</div>
-  <script type=\'text/javascript\'>setTimeout(function() {location.href="index_en.html"}, 1500)</script>');
-        }
+// validate the variables ======================================================
+// if any of these variables don't exist, add an error to our $errors array
 
+if (empty($_POST['link']) && empty($_POST['email'])
+    && empty($_POST['email-popup'])
+    && empty($_POST['email-footer'])
+    && empty($_POST['message-popup'])
+    && empty($_POST['message-footer'])) {
+    $errors['link'] = 'Field is required.';
+}
 
+// return a response ===========================================================
+
+// if there are any errors in our errors array, return a success boolean of false
+if (!empty($errors)) {
+
+    // if there are items in our errors array, return those errors
+    $data['success'] = false;
+    $data['errors']  = $errors;
+} else {
+
+    // if there are no errors process our form, then return a message
+
+    // DO ALL YOUR FORM PROCESSING HERE
+    // THIS CAN BE WHATEVER YOU WANT TO DO (LOGIN, SAVE, UPDATE, WHATEVER)
+
+    $link    = htmlspecialchars(trim($_POST['link']));
+    $email   = htmlspecialchars(trim($_POST['email']));
+    $email_popup   = htmlspecialchars(trim($_POST['email-popup']));
+    $email_footer   = htmlspecialchars(trim($_POST['email-footer']));
+    $message_footer = htmlspecialchars(trim($_POST['message-footer']));
+    $message_popup = htmlspecialchars(trim($_POST['message-popup']));
+
+    $to      = 'nbstock1@gmail.com';
+    $subject = "";
+    if (isset($_GET['lang']) == 'ru') {
+        $subject .= "car selection (запрос)";
+    } elseif (isset($_GET['lan']) == 'lv') {
+        $subject .= "car selection (pieprasijums)";
     } else {
-        $url   = 'https://www.google.com/recaptcha/api/siteverify';
-        $key   = '6LfcSNUUAAAAAIdreQCz3XAM0veh27crf2eI2bn-';
-        $query = $url . '?secret=' . $key . '&response=' . $_POST['g-recaptcha-response'] . '&remoteip=' . $_SERVER['REMOTE_ADDR'];
-
-        $data = json_decode(file_get_contents($query));
-
-        if ($data->success == false) {
-            exit('Капча введена неверно');
-        } else {
-
-            $links    = htmlspecialchars(trim($_POST['link']));
-            $email    = htmlspecialchars(trim($_POST['email']));
-            $messages = htmlspecialchars(trim($_POST['message']));
-
-            $to      = 'kashik.roman@rambler.ru';
-            $from ='http://bpauto.lv/avtopodbor/index.php';
-            $subject = '';
-            if (isset($_GET['lang']) == 'ru') {
-                $subject .= "car selection (запрос)";
-            } elseif (isset($_GET['lan']) == 'lv') {
-                $subject .= "car selection (pieprasijums)";
-            } else {
-                $subject .= "car selection (request)";
-            }
-
-            $message = "
-Е-майл: <a href='mailto:" . $email . "'>" . $email . "</a><br>
-Ссылка: <a href='$links'>" . $links . "</a><br>
-Сообщение : <div>".$messages."</div>
-";
-            $headers = "MIME-Version: 1.0" . "\r\n";
-            $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-
-//$headers .= 'From: <NBOutlet>' . "\r\nReply-to: $mail\r\n";
-            $headers .= 'From: ' . $from . "\r\nReply-to:  $from \r\n";
-
-            if (mail($to, $subject, $message, $headers)) {
-                if (isset($_GET['lang']) == 'ru') {
-                    echo '<div class="success-message" style="position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);">Спасибо за заявку. Мы свяжемся с вами в ближайшее время.</div>
-                    <script type=\'text/javascript\'>setTimeout(function() {location.href="index.php"}, 1500)</script>';
-                } elseif (isset($_GET['lan']) == 'lv') {
-                    echo '<div class="success-message" style="position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);">Paldies par pieteikumu. Mēs ar Jums sazināsimies tuvākajā laikā.</div>
-                     <script type=\'text/javascript\'>setTimeout(function() {location.href="index_lv.html"}, 1500)</script>';
-                } else {
-                    echo '<div class="success-message" style="position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);">Thank you for the application. We will contact you soon. </div>
-                    <script type=\'text/javascript\'>setTimeout(function() {location.href="index_en.html"}, 1500)</script>';
-                }
-            } else {
-                echo "Сообщение не было отправлено.";
-            }
-        }
+        $subject .= "car selection (request)";
     }
 
 
+    $message = '
+        <p>Ссылка:<a href="' . $link . '">' . $link . '</a></p>
+        <p>Сообщение:<span>' . $message_popup . ' '.$message_footer.'</span></p>
+        <p>E-mail: <a href="mailto:" ' . $email . ' ' . $email_popup . '' . $email_footer . '>' . $email . '' . $email_popup . '' . $email_footer . '</a></p>
+        ';
+    $headers = "MIME-Version: 1.0" . "\r\n";
+    $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+    $headers .= 'From: ' . $email . $email_popup. $email_footer."\r\nReply-to: $email . $email_popup . $email_footer\r\n";
+
+
+    if (mail($to, $subject, $message, $headers)) {
+        // show a message of success and provide a true success variable
+        $data['success'] = true;
+        if (isset($_GET['lang']) == 'ru') {
+            $data['message'] .= 'Спасибо за заявку .. мы свяжемся с вами!';
+        } elseif (isset($_GET['lan']) == 'lv') {
+            $data['message'] .= 'Paldies par Jūsu pieprasījumu. <br>Mēs sazināsimies ar Jums tuvākajā laikā!';
+        } else {
+            $data['message'] .= 'Thank you for your request. We will contact you soon!';
+        }
+    }
 }
+
+
+// return all our data to an AJAX call
+echo json_encode($data);
