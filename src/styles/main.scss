@@ -650,6 +650,20 @@ ul {
       }
     }
   }
+
+  &__result {
+    color:red;
+    font-size: 15.5px;
+    text-align: center;
+    margin: 0 auto;
+    &--main {
+      font-size: 15.5px;
+      color:#fff;
+      text-align: center;
+      margin: 0 auto;
+    }
+
+  }
 }
 
 //Стили к блоку Заказа
@@ -1027,7 +1041,7 @@ ul {
 
   &__menu {
     display: flex;
-    flex-basis: calc(100% / 3 + 289px);
+    flex-basis: calc(100% / 3 + 280px);
     flex-wrap: wrap;
     justify-content: space-around;
   }
@@ -1246,4 +1260,9 @@ ul {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.has-error {
+  border:1px solid red;
+  border-radius: 5px;
 }
