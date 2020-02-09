@@ -1,5 +1,6 @@
 $(function () {
     //magnific-popup
+    var buttonUp;
     $('.popup-modal').magnificPopup({
         type: 'inline',
         preloader: false,
@@ -41,19 +42,24 @@ $(function () {
     // Кнопка вверх
 
     $(window).scroll(function () {
-        if ($(window).scrollTop() > 500) {
+        if ($(window).scrollTop() > 1000) {
             buttonUp.show(500);
         } else {
             buttonUp.hide(500);
         }
     });
-    let buttonUp = $('#btnUp');
+
+
+
+     buttonUp = $('#btnUp');
     buttonUp.on('click', function (event) {
         event.preventDefault();
         $('html, body').animate({
             scrollTop: $('body').offset().top
         }, 800);
     });
+
+
 
 // Remove placeholder on focus
     $('input,textarea').focus(function () {
@@ -64,30 +70,6 @@ $(function () {
         $(this).attr('placeholder', $(this).data('placeholder'));
     });
 
-
-    // $(function(){
-    //     // откуда берем данные сформы
-    //     $('.form__btn').on('click',function(e){
-    //         //отменяем стандартное действие при отправке формы
-    //         e.preventDefault();
-    //         //берем из формы метод передачи данных
-    //         var m_method=$(this).attr('method');
-    //         //получаем адрес скрипта на сервере, куда нужно отправить форму
-    //         var m_action=$(this).attr('action');
-    //         //получаем данные, введенные пользователем в формате input1=value1&input2=value2...,
-    //         //то есть в стандартном формате передачи данных формы
-    //         var m_data=$(this).serialize();
-    //         $.ajax({
-    //             type: m_method,
-    //             url: m_action,
-    //             data: m_data,
-    //             success: function(result){
-    //                 // где показываем результат
-    //                 $('.form_result').html(result.success);
-    //             }
-    //         });
-    //     });
-    // });
 
     // process the form
 

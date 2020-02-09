@@ -16,11 +16,15 @@ body {
   //max-width: 1440px;
   min-width: 1300px;
   position: relative;
+
 }
 
 .container-fluid {
   margin: 0 auto;
   width: 1030px;
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2){
+    width: 1200px;
+  }
 }
 
 .container {
@@ -219,9 +223,15 @@ ul {
     list-style: none;
     margin: 0;
     padding: 0;
-
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2){
+      display: block;
+    }
     &__item {
       margin: 0 8px;
+      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2){
+        display: inline;
+        margin: 0 4px;
+      }
     }
 
     &__link {
@@ -270,6 +280,9 @@ ul {
 
   &__lang {
     margin-right: 34px;
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2){
+      margin-right: 0;
+    }
   }
 
   &__lang a {
@@ -357,6 +370,7 @@ ul {
   &__bottom {
     height: 100%;
   }
+
   //&__img {
   //  max-width: 100%;
   //  max-height: 128px;
@@ -380,6 +394,10 @@ ul {
     text-align: center;
     text-transform: uppercase;
     max-width: 100%;
+  }
+
+  &__title--small {
+    font-size: 14px;
   }
 
   &__list {
@@ -411,7 +429,8 @@ ul {
       }
     }
   }
-  &__content {    max-width:100%;
+
+  &__content { max-width: 100%;
   }
 
   &__content p {
@@ -474,6 +493,7 @@ ul {
 
     &--problem {
       max-width: 953px;
+      margin: 0 auto;
     }
   }
 
@@ -652,13 +672,14 @@ ul {
   }
 
   &__result {
-    color:red;
+    color: red;
     font-size: 15.5px;
     text-align: center;
     margin: 0 auto;
+
     &--main {
       font-size: 15.5px;
-      color:#fff;
+      color: #fff;
       text-align: center;
       margin: 0 auto;
     }
@@ -668,7 +689,6 @@ ul {
 
 //Стили к блоку Заказа
 .order {
-  padding-bottom: 57px;
 
   &__wrap {
     background-image: url('../images/mustang_bg.png');
@@ -677,6 +697,11 @@ ul {
     background-size: cover;
     height: 620px;
     width: 100%;
+    margin-bottom: 57px;
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2){
+      height: 100%;
+      background-size: contain;
+    }
   }
 
   &__heading {
@@ -1225,9 +1250,11 @@ ul {
     width: 267px;
   }
 }
+
 .mfp-container {
   height: 0;
 }
+
 .mfp-close-btn-in .mfp-close {
   opacity: 0;
   width: 0;
@@ -1263,6 +1290,34 @@ ul {
 }
 
 .has-error {
-  border:1px solid red;
+  border: 1px solid red;
   border-radius: 5px;
+}
+
+
+@media only screen and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (-webkit-min-device-pixel-ratio : 2) {
+
+  .container-fluid {width : 90%;margin : 0 auto}
+}
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait)
+and (-webkit-min-device-pixel-ratio: 2) {
+
+  .container-fluid {width : 95%;margin : 0 auto}
+  /*.navigation {flex-wrap: nowrap}*/
+  /*.navigation__block{margin : 0 auto;}*/
+  /*!*.navigation .menu {margin : 0 auto;}*!*/
+  /*.navigation .menu__item {display:block;margin : 0 8px;padding : 0 5px;}*/
+  /*.navigation .menu__link{white-space:nowrap}*/
+  .navigation__action {max-width : 190px;}
+  .navigation__top{justify-content: flex-start;height : 18px;margin : 13px 0;}
+  .navigation__social {margin-right:15px}
+  .navigation__lang a {font-size : 11px}
+  .navigation__lang a:hover {font-weight : 400}
+  .navigation__lang  {margin-right : auto; display : flex; align-items: center;justify-content: space-between; width:50px }
+
 }
