@@ -698,10 +698,15 @@ ul {
     height: 620px;
     width: 100%;
     margin-bottom: 57px;
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and(orientation: portrait) and (-webkit-min-device-pixel-ratio: 2){
+      height: 100%;
+      background-size: contain;
+    }
     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2){
       height: 100%;
       background-size: contain;
     }
+
   }
 
   &__heading {
@@ -1318,6 +1323,6 @@ and (-webkit-min-device-pixel-ratio: 2) {
   .navigation__social {margin-right:15px}
   .navigation__lang a {font-size : 11px}
   .navigation__lang a:hover {font-weight : 400}
-  .navigation__lang  {margin-right : auto; display : flex; align-items: center;justify-content: space-between; width:50px }
+  .navigation__lang  {margin-right : auto; display : flex; align-items: center;justify-content: space-between; width:100px }
 
 }
